@@ -1,7 +1,7 @@
 from django.urls import path
 
 from frontend.views import (home, member_register, member_login, member_logout, member_dashboard, books_list,
-                            loaned_books, fines_view,pay_fine,payment_success,reservations_view)
+                            loaned_books, fines_view,pay_fine,payment_success,reservations_view,reserve_book)
 
 urlpatterns = [
     path('', home),
