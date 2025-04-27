@@ -1,6 +1,7 @@
 from django.urls import path
 
-from frontend.views import home, member_register, member_login, member_logout, member_dashboard, books_list,loaned_books
+from frontend.views import (home, member_register, member_login, member_logout, member_dashboard, books_list,
+                            loaned_books, fines_view)
 
 urlpatterns = [
     path('', home),
