@@ -131,7 +131,6 @@ class Loan(models.Model):
     class Meta:
         db_table = 'loan'
 
-
 class Fine(models.Model):
     member = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
     loan = models.ForeignKey(Loan, on_delete=models.CASCADE)
@@ -140,3 +139,12 @@ class Fine(models.Model):
 
     def __str__(self):
         return f"{self.member.email} - ₹{self.fine_amount} on {self.fine_date}"
+
+
+class FinePayment(models.Model):
+    member = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
+    payment_date = models.DateField()
+    payment_amount = models.DecimalField(max_digits=8, decimal_places=2)
+
+    def __str__(self):
+        return f"{self.member.email} - ₹{self.payment_amount} on {self.payment_date}"
