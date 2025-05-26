@@ -25,8 +25,14 @@ SECRET_KEY = 'django-insecure-auafe8y#4-)5!i)3mfs-p63rs%9lix+e5vgqcfn0s@f5o45ns$
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "https://dj-library-management-system.onrender.com"
+]
 
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://dj-library-management-system.onrender.com"
+]
 
 # Application definition
 
