@@ -26,6 +26,7 @@ SECRET_KEY = 'django-insecure-auafe8y#4-)5!i)3mfs-p63rs%9lix+e5vgqcfn0s@f5o45ns$
 DEBUG = True
 
 ALLOWED_HOSTS = [
+    "127.0.0.1",
     "dj-library-management-system.onrender.com"
 ]
 
